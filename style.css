@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+:after, :before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:active, :focus {
+  outline: none;
+}
+
+a:active,
+a:focus {
+  outline: none;
+}
+
+aside, footer, header, nav {
+  display: block;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus- inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  background-color: rgb(73, 70, 70);
+}
+
+.wrapper {
+  min-height: 100%;
+}
+.wrapper .content {
+  padding: 30px 50px;
+}
+.wrapper .content h1 {
+  font-size: 25px;
+  color: rgb(193, 207, 207);
+  text-align: center;
+  font-weight: 600;
+}
+.wrapper .content .grid {
+  position: relative;
+  font-size: 30px;
+  margin-top: 25px;
+}
+.wrapper .content .grid .grid_body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 25px 1fr;
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
+      grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+  gap: 25px 30px;
+}
+.wrapper .content .grid .grid_body .grid_item {
+  border: 2px dashed black;
+  text-align: center;
+  color: azure;
+  padding: 70px;
+}
+.wrapper .content .grid .grid_body .grid_item1 {
+  color: black;
+  background-color: olive;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.wrapper .content .grid .grid_body .grid_item2 {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.wrapper .content .grid .grid_body .grid_item3 {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+.wrapper .content .grid .grid_body .grid_item4 {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+.wrapper .content .grid .grid_body .grid_item5 {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+}
+.wrapper .content .grid .grid_body .grid_item6 {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+}
