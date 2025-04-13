@@ -1,10 +1,119 @@
 //обнулене
 @import "nullstyle.scss";
 //шрифт Pt Sanss
-//@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+//function to %
+@function prc($pxone,$pxtwo){
+  $result:math.div($pxone,$pxtwo) * 100%;
+  @return $result;
+}
+//to rem
+@function rem($px){
+  $result:math.div($px,16) + rem;
+  @return $result;
+}
+//to em
+@function em($px){
+  $result:math.div($px,16) + em;
+  @return $result;
+}
+
+
+
+
+
 body{
-  background-color: rgb(73, 70, 70);
+  background-color: #333;
+  color: #fff;
+  font-family: PT Sans;
 }
+
+.example_container{
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 65.625rem;
+    position: relative;
+}
+@media(min-width:48em){
+.example_container::before{
+  content: "";
+  background: url(/img/decor.svg) 0 0 / 100%  no-repeat;
+  position: absolute;
+  right: 0;
+  width: 14.57%;
+  padding-top: 22.95%;
+  top:50%;
+  transform:translate(50%,-50%);
+}
+}
+
 .wrapper{ 
- 
+  min-height: 100%;
+  overflow: hidden;
+ .example{
+  padding: 80px 0;
+  .example_header{
+    margin-bottom: 25px;
+    max-width: 46.875rem;
+    .example__sub-title{
+      font-size: 0.875rem;
+      color: #a989c7;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.7;
+      margin-bottom: 1.07em;
+    }
+    .example__title{
+      color: #93b482;
+      font-size:2.625em;
+      line-height: 1.19;
+      font-weight: 900;
+      text-transform: uppercase;
+
+      margin-bottom: 0.38em;
+      letter-spacing: 0.12em;
+    }
+    .example__text{
+      line-height: 1.5;
+
+    }
+  }
+
+  .example_items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(18.125rem,1fr)); 
+    gap: 24px;
+
+    .example__item{
+      //padding: 0 12px;
+      //flex: 1 1 33.3333%;
+      //min-width: 18.125rem;
+       
+      .item-example__icon{
+        //flex: 0 0 63px;
+      }
+      .item-example__body{
+        .item-example__title{
+          color: #f2726f;
+          font-weight: 900;
+          font-size: 1.5rem;
+          margin-bottom: 0.45em;
+        }
+        .item-example__text{
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+ } 
 }
+
+.item-example{
+  display: flex;
+  column-gap: 24px;
+  }
+
+ @media(max-width:48em){
+   body{font-size: 14px;}
+ }
